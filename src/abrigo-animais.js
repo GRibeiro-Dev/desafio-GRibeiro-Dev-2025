@@ -1,7 +1,4 @@
-class AbrigoAnimais {
-  encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
-    const animais = [
-
+const animais = [
   {
     name: "Rex",
     type: "cao",
@@ -52,7 +49,8 @@ for (const animal of animais) {
         isBrinquedosValido.add(brinquedo);
       }
     }
-
+class AbrigoAnimais {
+  encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
     const listaBrinquedosP1 = brinquedosPessoa1.split(',');
     
     const listaBrinquedosP2 = brinquedosPessoa2.split(',');
