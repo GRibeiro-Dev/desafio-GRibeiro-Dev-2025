@@ -64,7 +64,7 @@ for (const animal of animais) {
     }
     
     for (const nomeAnimal of listaAnimais) {
-      if (!animais.find(animal => animal.name === nomeAnimal) {
+      if (!animais.find(animal => animal.name === nomeAnimal)){
         return { erro: 'Animal inválido' };
       }
     }
