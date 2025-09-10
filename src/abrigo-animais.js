@@ -1,4 +1,6 @@
-const animais = [
+class AbrigoAnimais {
+  encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
+    const animais = [
 
   {
     name: "Rex",
@@ -44,16 +46,13 @@ const animais = [
 
 ]
 
-const todosOsBrinquedosValidos = new Set();
+const isBrinquedosValido = new Set();
 for (const animal of animais) {
       for (const brinquedo of animal.favoriteToys) {
-        todosOsBrinquedosValidos.add(brinquedo);
+        isBrinquedosValido.add(brinquedo);
       }
     }
 
-
-class AbrigoAnimais {
-  encontraPessoas(brinquedosPessoa1, brinquedosPessoa2, ordemAnimais) {
     const listaBrinquedosP1 = brinquedosPessoa1.split(',');
     
     const listaBrinquedosP2 = brinquedosPessoa2.split(',');
@@ -75,7 +74,7 @@ class AbrigoAnimais {
     }
 
     for (const brinquedo of listaBrinquedosP1) {
-      if (!todosOsBrinquedosValidos.has(brinquedo)) {
+      if (!isBrinquedosValido.has(brinquedo)) {
         return { erro: 'Brinquedo inválido'};
       }
     } 
@@ -85,7 +84,7 @@ class AbrigoAnimais {
     }
 
     for (const brinquedo of listaBrinquedosP2) {
-      if (!todosOsBrinquedosValidos.has(brinquedo)) {
+      if (!isBrinquedosValido.has(brinquedo)) {
         return { erro: 'Brinquedo inválido '};
       }
     }
@@ -106,8 +105,8 @@ function BrinquedoOrdem(brinquedosFavoritos, brinquedosDaPessoa) {
         
       }
     }
-  }
   return indiceFavoritoAtual === brinquedosFavoritos.length;
+  }
 }
 
 export { AbrigoAnimais as AbrigoAnimais };
