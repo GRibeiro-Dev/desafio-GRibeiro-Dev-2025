@@ -1,5 +1,3 @@
-export { AbrigoAnimais as AbrigoAnimais };
-
 const animais = [
 
   {
@@ -111,3 +109,5 @@ function BrinquedoOrdem(brinquedosFavoritos, brinquedosDaPessoa) {
   }
   return indiceFavoritoAtual === brinquedosFavoritos.length;
 }
+
+export { AbrigoAnimais as AbrigoAnimais };
